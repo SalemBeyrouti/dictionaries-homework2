@@ -57,3 +57,15 @@ while action != "no":
    dict_input[name] = number
 
 print ("original dictionary: ", dict_input)
+
+#Transform the dictionary: values becomes keys and keys becomes values
+
+new_dict = {}
+
+for key, value in dict_input.items(): #.items is use to access all the values 
+   if value in new_dict:
+      new_dict[value].append(key)
+   else:
+      new_dict[value] = [key]
+#this if and else converts the placement of both key and value
+print ("Transformed dictionary: ", new_dict)
