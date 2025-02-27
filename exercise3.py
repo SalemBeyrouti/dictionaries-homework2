@@ -26,8 +26,22 @@ for i in range (departments):
 
 # print (company_employees)
 
-#2nd part of the exercise
+# #2nd part of the exercise
 
 company_employees["Engineering"]["David"] = {"age": 27, "role": "Data Scientist"}
 
 print (company_employees)
+
+def count_total_employees(company): 
+    #when defining a fucntion the parameter isnide is just a placeholder
+    #i can name it whatver i want it can not be defined
+    #it loopss through each key in the defined dictionary
+   total_count = 0
+   for department in company.values():
+        #.values used to access all the values in the dictionary
+        total_count += len(department)
+
+   return total_count
+   
+total_employees = count_total_employees(company_employees)
+print(f"Total number of employees in the company: {total_employees}")
